@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx solium -f donation.sol",
+    "compileAbi": "npx solcjs --abi donation.sol",
+    "compileBin": "npx solcjs --bin donation.sol",
+    "clean": "rm -vf *.abi"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethlint": "^1.2.5",
     "solc": "0.4.24"
+  },
+  "devDependencies": {
+    "ethlint": "^1.2.5"
   }
 }
